@@ -27,5 +27,5 @@ main = do
   let datapath = userdir </> ".honyaku" </> "apikey"
   isfile <- doesFileExist datapath
   if isfile
-  then print =<< loadApiKey datapath
+  then tran =<< loadApiKey datapath
   else saveApiKey datapath
